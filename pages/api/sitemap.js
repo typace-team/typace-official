@@ -1,3 +1,7 @@
+export const runtime = 'edge';
+
+// 其余代码保持不变
+
 import { SitemapStream, streamToPromise } from 'sitemap';
 import { Readable } from 'stream';
 
