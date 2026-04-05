@@ -101,7 +101,7 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
     if (walineInstance.current) walineInstance.current.destroy();
     walineInstance.current = window.Waline.init({
       el: '#waline-comment-container',
-      serverURL: 'https://comment.mrzxr.top/',
+      serverURL: 'https://typace-free-comment-service.china.mrche.top/',
       path: router.asPath,
       dark: 'html.dark',
     });
