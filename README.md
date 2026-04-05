@@ -1,4 +1,4 @@
-# Theme Typace
+# Typace Blogging Platform, known as 杰奏 in Chinese
 
 "typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."
 
