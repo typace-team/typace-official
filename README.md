@@ -1,5 +1,7 @@
 # Theme Typace
 
+"typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."
+
 注：中文版介绍及教程正在typace官网编写中，敬请期待
 
    本仓库为typace项目的正式版，目前由Terryzhang负责开发，有最新的功能，目前开放fork，同时mrche的仓库也开放，欢迎clone和star
