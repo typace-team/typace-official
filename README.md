@@ -357,9 +357,9 @@ Have questions or need help? Get in touch:
 
 ### Creators
 
+- **@typace-team** - our super official account
 - **@terryzhangxr** - Main developer
-- **@mrche** - Project founder & co-developer
-- **@che-ui** - GitHub profile
+- **@che-ui** - Project founder & co-developer
 
 ---
 
