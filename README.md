@@ -2,7 +2,7 @@
 
 "typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."
 
-## when using cloudflare pages
+## When using cloudflare pages:
 ### Solution: Add `nodejs_compat` Flag
 
 The error is because your Pages project needs the `nodejs_compat` compatibility flag enabled for Next.js/Node.js compatibility.
@@ -80,8 +80,8 @@ For more details, check the [commit history](https://github.com/terryzhangxr/typ
 
 ## Contact
 
-- Email: [zhang@mrzxr.com](mailto:zhang@mrzxr.com)
-- GitHub: [@che-ui](https://github.com/che-ui)
+- Email: [typace@proton.me](mailto:typace@proton.me)
+- GitHub: [@che-ui](https://github.com/@che-ui)
 
 ## License
 
