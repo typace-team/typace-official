@@ -23,7 +23,9 @@
 
 Typace is a **modern, high-performance blog framework** designed for developers, writers, and content creators. Built on top of [Next.js](https://nextjs.org) and styled with [Tailwind CSS](https://tailwindcss.com), it provides an elegant and efficient platform for sharing technology insights, life experiences, and creative thoughts.
 
-Created by **@terryzhangxr** and **@che-ui**, two passionate middle school students, Typace aims to inspire more people to discover the joy of technology and creative expression.
+**This account is registered and owned by @che-ui. I have noticed that @terryzhangxr, as the lead developer, intentionally removed my attribution, and I express my strong dissatisfaction with this. I hereby issue a formal warning: @che-ui is the original initiator of Typace, and the Typace repository under his account has the earliest creation date.**
+
+Created by **@terryzhangxr** and **@che-ui**, two passionate  middle school students, Typace aims to inspire more people to discover the joy of technology and creative expression.
 
 ### Key Highlights
 
