@@ -9,7 +9,7 @@ import html from 'remark-html';
 import Head from 'next/head';
 import Link from 'next/link';
 
-// --- 1. 服务端数据处理 ---
+// --- 服务端数据获取 ---
 export async function getStaticPaths() {
   const posts = getSortedPostsData();
   const paths = posts.map((post) => ({ params: { slug: post.slug } }));
@@ -30,14 +30,13 @@ export async function getStaticProps({ params }) {
   return { props: { frontmatter: data, contentHtml, recommendedPosts, allPostsData } };
 }
 
-// --- 2. 页面组件 ---
 export default function Post({ frontmatter, contentHtml, recommendedPosts, allPostsData }) {
   const router = useRouter();
   const canvasRef = useRef(null);
   const contentRef = useRef(null);
   const walineInstance = useRef(null);
   
-  // 状态管理
+  // --- 状态管理 ---
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -47,7 +46,7 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
   const [toc, setToc] = useState([]);
   const [activeHeading, setActiveHeading] = useState(null);
 
-  // 搜索逻辑
+  // --- 搜索逻辑 ---
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
     const q = searchQuery.toLowerCase();
@@ -56,9 +55,7 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
     ).slice(0, 6);
   }, [searchQuery, allPostsData]);
 
-  // --- 3. 核心功能逻辑 ---
-
-  // 代码高亮加载与应用
+  // --- 功能函数 ---
   const applyHighlighting = useCallback(() => {
     if (typeof window !== 'undefined' && window.hljs && contentRef.current) {
       contentRef.current.querySelectorAll('pre code').forEach(el => window.hljs.highlightElement(el));
@@ -66,36 +63,18 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
         if (pre.querySelector('.code-header')) return;
         const header = document.createElement('div');
         header.className = 'code-header flex justify-between items-center px-4 py-2 bg-white/5 border-b border-white/10 text-[10px] uppercase font-bold text-white/50';
-        header.innerHTML = `<span>Code</span><button class="copy-btn hover:text-white">Copy</button>`;
+        const lang = Array.from(pre.querySelector('code').classList).find(c => c.startsWith('language-'))?.replace('language-', '') || 'code';
+        header.innerHTML = `<span>${lang}</span><button class="copy-btn hover:text-white transition-colors">Copy</button>`;
         pre.prepend(header);
-        header.querySelector('button').onclick = () => {
+        header.querySelector('button').onclick = (e) => {
           navigator.clipboard.writeText(pre.querySelector('code').innerText);
-          header.querySelector('button').innerText = 'Copied';
-          setTimeout(() => header.querySelector('button').innerText = 'Copy', 2000);
+          e.target.innerText = 'Copied';
+          setTimeout(() => e.target.innerText = 'Copy', 2000);
         };
       });
     }
   }, []);
 
-  // 动态绑定图片点击事件 (修复无法点击的问题)
-  useEffect(() => {
-    if (!contentRef.current) return;
-    // 确保 DOM 注入后的宏任务中执行
-    const timer = setTimeout(() => {
-      const images = contentRef.current.querySelectorAll('img');
-      images.forEach(img => {
-        img.style.cursor = 'zoom-in';
-        img.onclick = (e) => {
-          e.preventDefault();
-          setPreviewImage(img.src);
-        };
-      });
-      applyHighlighting();
-    }, 200);
-    return () => clearTimeout(timer);
-  }, [contentHtml, applyHighlighting]);
-
-  // Waline 评论
   const initWaline = useCallback(() => {
     if (typeof window === 'undefined' || !window.Waline) return;
     if (walineInstance.current) walineInstance.current.destroy();
@@ -107,33 +86,30 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
     });
   }, [router.asPath]);
 
-  // 矩阵粒子背景
+  // --- 核心副作用 ---
   useEffect(() => {
     const savedDark = localStorage.getItem('darkMode') === 'true';
     setIsDarkMode(savedDark);
     document.documentElement.classList.toggle('dark', savedDark);
     setTimeout(() => setShowContent(true), 150);
 
-    // 滚动锁定逻辑
-    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'unset';
-
-    // 加载脚本
+    // 动态脚本加载
     const loadScripts = () => {
-      if (!window.hljs) {
-        const s = document.createElement('script');
-        s.src = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js';
-        s.onload = applyHighlighting;
-        document.body.appendChild(s);
-      }
-      if (!window.Waline) {
-        const s = document.createElement('script');
-        s.src = 'https://unpkg.com/@waline/client@v2/dist/waline.js';
-        s.onload = initWaline;
-        document.body.appendChild(s);
-      } else { initWaline(); }
+      const scripts = [
+        { id: 'hljs-js', src: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js', callback: applyHighlighting },
+        { id: 'waline-js', src: 'https://unpkg.com/@waline/client@v2/dist/waline.js', callback: initWaline }
+      ];
+      scripts.forEach(s => {
+        if (!document.getElementById(s.id)) {
+          const script = document.createElement('script');
+          script.id = s.id; script.src = s.src; script.onload = s.callback;
+          document.body.appendChild(script);
+        } else { s.callback(); }
+      });
     };
     loadScripts();
 
+    // 粒子动画
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     let time = 0, animationFrameId;
@@ -156,20 +132,36 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
     return () => {
       window.removeEventListener('resize', resize);
       cancelAnimationFrame(animationFrameId);
-      if (walineInstance.current) walineInstance.current.destroy();
     };
-  }, [isDarkMode, isMobileMenuOpen, applyHighlighting, initWaline]);
+  }, [isDarkMode, applyHighlighting, initWaline]);
 
-  // TOC 生成与滚动监听
+  // 图片点击与 TOC 挂载
   useEffect(() => {
-    if (contentRef.current) {
-      const headings = Array.from(contentRef.current.querySelectorAll('h1, h2, h3'));
-      setToc(headings.map(h => ({ id: h.id || (h.id = h.textContent.replace(/\s+/g, '-')), text: h.textContent, level: h.tagName.toLowerCase() })));
-      const obs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) setActiveHeading(e.target.id); }), { rootMargin: '-10% 0px -80% 0px' });
-      headings.forEach(h => obs.observe(h));
-      return () => obs.disconnect();
-    }
+    if (!contentRef.current) return;
+    const images = contentRef.current.querySelectorAll('img');
+    images.forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.onclick = () => setPreviewImage(img.src);
+    });
+
+    const headings = Array.from(contentRef.current.querySelectorAll('h1, h2, h3'));
+    setToc(headings.map(h => ({ 
+      id: h.id || (h.id = h.textContent.toLowerCase().replace(/\s+/g, '-')), 
+      text: h.textContent, 
+      level: h.tagName.toLowerCase() 
+    })));
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) setActiveHeading(e.target.id); });
+    }, { rootMargin: '-10% 0px -80% 0px' });
+    headings.forEach(h => obs.observe(h));
+    return () => obs.disconnect();
   }, [contentHtml]);
+
+  // 滚动锁定
+  useEffect(() => {
+    document.body.style.overflow = (isMobileMenuOpen || isSearchOpen) ? 'hidden' : 'unset';
+  }, [isMobileMenuOpen, isSearchOpen]);
 
   const toggleDarkMode = () => {
     const next = !isDarkMode;
@@ -189,7 +181,7 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
       
       <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0 opacity-100" />
 
-      {/* --- 统一导航栏 --- */}
+      {/* 统一导航栏 */}
       <nav className="fixed top-0 w-full z-[100] border-b border-black/5 dark:border-white/10 bg-white/80 dark:bg-black/80 backdrop-blur-xl">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
           <Link href="/"><a className="text-sm font-black tracking-widest hover:opacity-50 transition-opacity uppercase z-50">TYPACE</a></Link>
@@ -198,20 +190,18 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
             <NavLink href="/archive">Archive</NavLink>
             <NavLink href="/tags">Tags</NavLink>
             <NavLink href="/about">About</NavLink>
-            <button onClick={() => setIsSearchOpen(true)} className="p-1 opacity-40 hover:opacity-100 transition-opacity focus:outline-none"><SearchIcon /></button>
-            <button onClick={toggleDarkMode} className="w-5 h-5 flex items-center justify-center rounded-full border border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5 transition-all text-sm focus:outline-none">
+            <button onClick={() => setIsSearchOpen(true)} className="p-1 opacity-40 hover:opacity-100 transition-opacity"><SearchIcon /></button>
+            <button onClick={toggleDarkMode} className="w-5 h-5 flex items-center justify-center rounded-full border border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5 transition-all text-sm">
               {isDarkMode ? '☼' : '☾'}
             </button>
           </div>
 
           <div className="flex md:hidden items-center space-x-4 z-50">
-            <button onClick={() => setIsSearchOpen(true)} className="p-1 opacity-60 focus:outline-none"><SearchIcon /></button>
-            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-1 focus:outline-none">
-              {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
-            </button>
+            <button onClick={() => setIsSearchOpen(true)} className="p-1 opacity-60"><SearchIcon /></button>
+            <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-1">{isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}</button>
           </div>
         </div>
-
+        
         {/* 移动端菜单 */}
         <div className={`fixed inset-0 bg-white/95 dark:bg-black/95 backdrop-blur-3xl transition-all duration-500 md:hidden z-40 ${isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
           <div className="flex flex-col px-10 pt-32 h-full">
@@ -223,7 +213,7 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
             </div>
             <div className="mt-auto pb-16 border-t border-black/5 dark:border-white/10 pt-8 flex items-center justify-between">
               <span className="text-[10px] font-black uppercase tracking-widest opacity-40">System Theme</span>
-              <button onClick={toggleDarkMode} className="text-xs font-bold uppercase tracking-widest border border-black/10 dark:border-white/10 px-6 py-2 rounded-full">
+              <button onClick={toggleDarkMode} className="text-xs font-bold uppercase tracking-widest border border-black/10 dark:border-white/10 px-6 py-2 rounded-full active:scale-95 transition-all">
                 {isDarkMode ? 'Light' : 'Dark'}
               </button>
             </div>
@@ -231,7 +221,7 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
         </div>
       </nav>
 
-      {/* --- 主内容 (包含模糊与放大逻辑) --- */}
+      {/* 主体内容 */}
       <main className={`relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 pt-40 pb-32 transition-all duration-700 ease-in-out ${isMobileMenuOpen ? 'blur-2xl scale-[0.97] pointer-events-none opacity-50' : 'blur-0 scale-100 opacity-100'}`}>
         
         <header className={`max-w-4xl mx-auto mb-20 transition-all duration-[1500ms] ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
@@ -240,10 +230,10 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
             <div className="h-px w-8 bg-current"></div>
             <span>{frontmatter.tags?.[0] || 'Article'}</span>
           </div>
-          <h1 className="text-[clamp(2rem,6vw,4rem)] leading-[1.1] font-black tracking-tighter uppercase mb-12">{frontmatter.title}</h1>
+          <h1 className="text-[clamp(2.2rem,6vw,4.5rem)] leading-[1.05] font-black tracking-tighter uppercase mb-12">{frontmatter.title}</h1>
           {frontmatter.cover && (
-            <div className="w-full max-w-2xl mx-auto aspect-video overflow-hidden border border-black/5 dark:border-white/10 rounded-2xl group cursor-zoom-in" onClick={() => setPreviewImage(frontmatter.cover)}>
-                <img src={frontmatter.cover} className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105" alt="cover" />
+            <div className="w-full max-w-2xl aspect-video overflow-hidden border border-black/5 dark:border-white/10 rounded-2xl group cursor-zoom-in" onClick={() => setPreviewImage(frontmatter.cover)}>
+                <img src={frontmatter.cover} className="w-full h-full object-cover transition-all duration-[1.5s] group-hover:scale-105" alt="cover" />
             </div>
           )}
         </header>
@@ -256,7 +246,7 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
               <ul className="space-y-6 border-l border-black/5 dark:border-white/10">
                 {toc.map(item => (
                   <li key={item.id} className={`${item.level === 'h3' ? 'pl-8' : 'pl-6'} relative`}>
-                    <a href={`#${item.id}`} className={`block text-[13px] uppercase font-bold tracking-wider transition-all duration-300 ${activeHeading === item.id ? 'text-blue-500 translate-x-2' : 'opacity-30 hover:opacity-60 hover:translate-x-1'}`}>
+                    <a href={`#${item.id}`} className={`block text-[13px] uppercase font-bold tracking-wider transition-all duration-300 ${activeHeading === item.id ? 'text-blue-500 translate-x-2' : 'text-current opacity-30 hover:opacity-60 hover:translate-x-1'}`}>
                       {item.text}
                     </a>
                     {activeHeading === item.id && <div className="absolute left-[-1px] top-0 bottom-0 w-[2px] bg-blue-500 shadow-[0_0_10px_rgba(37,99,235,0.4)]" />}
@@ -268,14 +258,14 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
 
           {/* 文章正文 */}
           <article className={`flex-1 max-w-3xl transition-all duration-[1800ms] delay-200 ${showContent ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'}`}>
-            <div ref={contentRef} className="prose-terminal dark:prose-invert pointer-events-auto" dangerouslySetInnerHTML={{ __html: contentHtml }} />
+            <div ref={contentRef} className="prose-terminal dark:prose-invert" dangerouslySetInnerHTML={{ __html: contentHtml }} />
             <section id="comments" className="mt-32 pt-16 border-t border-black/5 dark:border-white/10">
                 <div id="waline-comment-container" />
             </section>
           </article>
         </div>
 
-        {/* 推荐文章 - Bento 风格 */}
+        {/* 推荐文章 */}
         <section className="mt-48 max-w-6xl mx-auto">
           <div className="flex items-center space-x-6 mb-12 opacity-20">
             <h2 className="text-xs font-black uppercase tracking-[0.5em]">Next Phase</h2>
@@ -286,7 +276,7 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
               <Link key={post.slug} href={`/posts/${post.slug}`}>
                 <a className="group relative bg-white dark:bg-black p-10 min-h-[300px] flex flex-col justify-end overflow-hidden">
                   <div className="absolute inset-0 z-0 transition-all duration-1000 group-hover:scale-110">
-                    <img src={post.cover} className="w-full h-full object-cover grayscale opacity-10 group-hover:grayscale-0 group-hover:opacity-40" />
+                    <img src={post.cover} className="w-full h-full object-cover opacity-20 group-hover:opacity-60" />
                   </div>
                   <div className="relative z-10 text-left">
                     <span className="text-[10px] font-mono opacity-30 mb-2 block uppercase tracking-widest">{post.date}</span>
@@ -299,27 +289,27 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
         </section>
       </main>
 
-      {/* --- 搜索系统 (同步主页) --- */}
+      {/* 搜索系统 */}
       {isSearchOpen && (
         <div className="fixed inset-0 z-[150] flex items-start justify-center pt-[10vh] px-8">
           <div className="absolute inset-0 bg-white/98 dark:bg-black/98 backdrop-blur-2xl" onClick={() => setIsSearchOpen(false)} />
           <div className="relative w-full max-w-3xl animate-in fade-in slide-in-from-bottom-8 duration-700">
             <input autoFocus className="w-full bg-transparent border-b-2 border-black/10 dark:border-white/10 text-3xl md:text-5xl font-black tracking-tighter outline-none pb-8 focus:border-blue-600 transition-all uppercase" placeholder="SEARCH..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
             <div className="mt-16 space-y-12 overflow-y-auto max-h-[60vh] pr-4 text-left">
-              {searchResults.map(result => (
+              {searchResults.length > 0 ? searchResults.map(result => (
                 <Link key={result.slug} href={`/posts/${result.slug}`}>
                   <a className="group block" onClick={() => setIsSearchOpen(false)}>
                     <div className="flex items-center space-x-4 mb-2 opacity-30"><span className="text-[9px] font-mono tracking-widest">{result.date}</span></div>
                     <h4 className="text-2xl md:text-3xl font-black group-hover:text-blue-600 transition-colors tracking-tighter uppercase">{result.title}</h4>
                   </a>
                 </Link>
-              ))}
+              )) : searchQuery && <p className="opacity-40 uppercase text-xs tracking-widest text-left">No results found.</p>}
             </div>
           </div>
         </div>
       )}
 
-      {/* --- 图片预览 (修复放大) --- */}
+      {/* 图片预览 */}
       {previewImage && (
         <div className="fixed inset-0 z-[1000] flex items-center justify-center bg-white/80 dark:bg-black/90 backdrop-blur-3xl p-4 md:p-20 cursor-zoom-out animate-in fade-in duration-300" onClick={() => setPreviewImage(null)}>
           <div className="relative animate-in zoom-in-95 duration-300 ease-out">
@@ -329,13 +319,9 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
         </div>
       )}
 
-      <footer className={`max-w-[1440px] mx-auto px-10 py-24 border-t border-black/5 dark:border-white/10 opacity-20 text-[9px] font-black uppercase tracking-[0.4em] flex justify-between transition-all ${isMobileMenuOpen ? 'blur-2xl' : 'blur-0'}`}>
-        <span>© Typace 2026</span>
-        <span className="hidden sm:inline">Minimalist System</span>
-      </footer>
-
       <style jsx global>{`
         body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+        .prose-terminal h1, .prose-terminal h2, .prose-terminal h3 { scroll-margin-top: 100px; }
         .prose-terminal { line-height: 1.9; font-size: 1.05rem; }
         .prose-terminal h2 { font-size: 2rem; font-weight: 900; letter-spacing: -0.05em; text-transform: uppercase; margin: 4.5rem 0 1.5rem; }
         .prose-terminal p { margin-bottom: 2.2rem; opacity: 0.85; }
@@ -351,7 +337,7 @@ export default function Post({ frontmatter, contentHtml, recommendedPosts, allPo
   );
 }
 
-// --- 子组件 ---
+// --- 组件定义 ---
 const NavLink = ({ href, children }) => (
   <Link href={href}><a className="opacity-40 hover:opacity-100 transition-opacity tracking-widest">{children}</a></Link>
 );
