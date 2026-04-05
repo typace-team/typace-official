@@ -2,6 +2,38 @@
 
 "typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."
 
+## when using cloudflare pages
+### Solution: Add `nodejs_compat` Flag
+
+The error is because your Pages project needs the `nodejs_compat` compatibility flag enabled for Next.js/Node.js compatibility.
+
+### Dashboard Steps:
+
+1. In your Pages project, go to **Settings** → **Functions** → **Compatibility Flags**
+
+2. Add `nodejs_compat` to both:
+   - **Production** environment
+   - **Preview** environment
+
+3. Save changes, then redeploy
+
+### Direct Link:
+[Go to Compatibility Flags](https://dash.cloudflare.com/5acaba5f6bc503b6b60f9bd22c993be2/pages/view/:projectName/settings/functions)
+
+*(Replace `:projectName` with your actual Pages project name)*
+
+---
+
+### Or via Wrangler CLI:
+
+If you're using Wrangler, add this to your `wrangler.toml`:
+
+```toml
+compatibility_flags = ["nodejs_compat"]
+```
+
+Then redeploy with `wrangler pages deploy`.
+
 注：中文版介绍及教程正在typace官网编写中，敬请期待
 
    本仓库为typace项目的正式版，目前由Terryzhang负责开发，有最新的功能，目前开放fork，同时mrche的仓库也开放，欢迎clone和star
