@@ -38,7 +38,7 @@ Then redeploy with `wrangler pages deploy`.
 
 注：中文版介绍及教程正在typace官网编写中，敬请期待
 
-   本仓库为typace项目的正式版，目前由Terryzhang负责开发，有最新的功能，目前开放fork，同时mrche的仓库也开放，欢迎clone和star
+   本仓库为typace项目的正式版，目前由Terryzhang主导开发，最早由mrche提出并建立，现在负责优化、宣传本项目，这个仓库有最新的功能，目前开放fork，同时mrche的仓库也开放，欢迎clone和star
 
 Welcome to **Typace**, an under-construction blog platform which based on Next.js focused on sharing technology, life, and thoughts.
 
@@ -87,7 +87,7 @@ For more details, check the [commit history](https://github.com/terryzhangxr/typ
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the GPL-3.0 License. See the LICENSE file for details.
 
 ## Contributing
 
