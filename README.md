@@ -25,7 +25,7 @@ Typace is a **modern, high-performance blog framework** designed for developers,
 
 **This account is registered and owned by @che-ui. I have noticed that @terryzhangxr, as the lead developer, intentionally removed my attribution, and I express my strong dissatisfaction with this. I hereby issue a formal warning: @che-ui is the original initiator of Typace, and the Typace repository under his account has the earliest creation date.**
 
-Created by **@terryzhangxr** and **@che-ui**, two passionate  middle school students, Typace aims to inspire more people to discover the joy of technology and creative expression.
+Created by **@terryzhangxr** and **@che-ui**, two passionate middle school students, Typace aims to inspire more people to discover the joy of technology and creative expression.
 
 ### Key Highlights
 
@@ -34,7 +34,7 @@ Created by **@terryzhangxr** and **@che-ui**, two passionate  middle school stud
 - 🌓 **Dark Mode**: Seamless light/dark theme switching with smooth transitions
 - 📱 **Fully Responsive**: Perfect experience across all devices
 - 📝 **Markdown Support**: Write posts in pure Markdown with full syntax support
-- 💬 **Comments**: Integrated comment system via Gitalk
+- 💬 **Comments**: Integrated comment system powered by TFCS (typace-free-comment-service). Database hosted in Singapore, near Chinese mainland.
 - 🔍 **SEO Optimized**: Built-in sitemap and RSS feed generation
 - 📊 **Table of Contents**: Auto-generated TOC with smooth scrolling navigation
 - ⚙️ **Highly Configurable**: Easy-to-customize through `config.js`
