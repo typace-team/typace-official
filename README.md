@@ -1,6 +1,7 @@
+"typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."
 
 
-```markdown name=README.md url=https://github.com/typace-team/typace-official/blob/main/README.md
+ name=README.md url=https://github.com/typace-team/typace-official/blob/main/README.md
 # <div align="center">✨ Typace 杰奏</div>
 
 <div align="center">
@@ -245,6 +246,7 @@ wrangler pages deploy
 
 Typace can be deployed to any platform that supports Next.js:
 - **Netlify**
+- **Cloudflare Pages**
 - **Railway**
 - **Render**
 - **AWS Amplify**
@@ -342,9 +344,8 @@ This project is licensed under the **GPL-3.0 License** - see the [LICENSE](LICEN
 
 
 
-# Typace Blogging Platform, known as 杰奏 in Chinese
 
-"typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."
+
 
 ## When using cloudflare pages:
 ### Solution: Add `nodejs_compat` Flag
