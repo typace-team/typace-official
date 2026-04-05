@@ -34,6 +34,8 @@ compatibility_flags = ["nodejs_compat"]
 
 Then redeploy with `wrangler pages deploy`.
 
+---
+
 注：中文版介绍及教程正在typace官网编写中，敬请期待
 
    本仓库为typace项目的正式版，目前由Terryzhang负责开发，有最新的功能，目前开放fork，同时mrche的仓库也开放，欢迎clone和star
