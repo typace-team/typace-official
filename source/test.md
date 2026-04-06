@@ -1,5 +1,5 @@
 ---
-title: theme typace主题文章测试
+title: Theme Typace Test
 date: 2025-2-20
 cover: https://tse1-mm.cn.bing.net/th/id/OIP-C.rcDTfMo1mvd4MvaBW11G1AHaDt?dpr=2&pid=ImgDetMain
 tags: ["测试"]
@@ -11,14 +11,30 @@ tags: ["测试"]
 #### 四级标题
 ##### 五级标题
 
-～～～删除线～～～
+~~删除线~~  
+**粗体文本**  
+*斜体文本*  
+***粗斜体***
 
-- 带点句
-- adcd
+- 无序列表项 1
+- 无序列表项 2
+  - 嵌套列表
 
-```Python
-print ("hello world")
-```
+1. 有序列表第一项
+2. 有序列表第二项
+
+- [x] 已完成任务
+- [ ] 未完成任务
+
+---
+
+| 表头1 | 表头2 | 表头3 |
+|-------|-------|-------|
+| 单元格1 | 单元格2 | 单元格3 |
+| 单元格4 | **粗体** | `代码` |
+
+```python
+print("hello world")
 
 # 标题
 ## 副标题
