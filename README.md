@@ -308,6 +308,15 @@ Then redeploy with `wrangler pages deploy`.
 
 ## What's our biggest update
 
+typace UI Replacement Instructions
+
+First of all, we have completely replaced the UI of typace, completely abandoning the cumbersome and redundant design, inconsistent visual matching, and insufficiently smooth interaction logic in the old version of the UI. We have carried out a comprehensive reconstruction and upgrade from visual presentation, interactive experience to detailed adaptation, only to bring a simpler, smoother and more high-quality user experience to every user using the typace framework.
+
+This full-scale UI replacement is not a simple style adjustment, but a re-sorting of the visual hierarchy and interaction logic based on a large number of user feedback and actual usage scenarios — the problems existing in the old UI, such as messy layout, inconsistent button styles, and poor responsive adaptation, have all been completely solved. The new UI adopts a more simple and elegant design style, and uses low-saturation, high-contrast colors in color matching, which not only ensures visual comfort, but also makes the core function modules more prominent and avoids visual fatigue; in terms of layout, it follows the principle of "minimalism and efficiency", deletes unnecessary decorative elements, makes the page structure clearer, allows users to quickly find the required functions, and improves operation efficiency.
+
+At the same time, the new UI has also made many optimizations in interactive details, such as optimizing button click feedback and page switching animations to make operations more textured; it is adapted to different device sizes, from desktop to mobile, which can achieve smooth display and accurate interaction, solving the problems of messy display and inconvenient operation of the old UI on mobile devices. In addition, the new UI also retains the core function entrances familiar to users, avoiding the operation cost for users due to UI replacement, realizing the dual improvement of "appearance and practicality", making typace not only easy to use, but also more visually attractive.
+
+
 We’ve finally identified the cause of the deployment error on Cloudflare Pages.
 
 ⚡️ ERROR: Failed to produce a Cloudflare Pages build from the project.
