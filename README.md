@@ -365,13 +365,13 @@ Have questions or need help? Get in touch:
 - **@che-ui** - Project founder & co-developer
 
 ### Important statement
-Dear users of WSLpress and the twpress blog framework (a project under @che-ui),
+Dear users of WSLpress and the twpress blog framework (two projects under @che-ui),
 
-We hereby announce that we will discontinue maintenance for both projects starting at **16:57:25 Beijing Time, April 6, 2026**.
+We hereby announce that we will discontinue maintenance for both projects starting at **16:59:59 Beijing Time, April 6, 2026**.
 
 Users who need further customization may refer to their respective README files for secondary development and contributions. I will check the projects on an irregular basis.
 
-Alternatively, you may consider migrating your blog to the typace framework, which is very simple:
+Alternatively, you may consider migrating your blog to the **typace framework**, which is very simple:
 1. Download the `.md` files from the `public` directory of your original repository.
 2. Fork this repository (**please do not leave the fork network**, otherwise you will no longer receive security updates).
 3. Finally, upload the files to the `public` directory of this repository, and the migration will be complete.
