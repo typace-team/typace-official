@@ -14,6 +14,7 @@
 [![Next.js](https://img.shields.io/badge/Next.js-13.5.8-black?logo=next.js)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)](https://react.dev)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.3.5-38B2AC?logo=tailwind-css)](https://tailwindcss.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/297d9c04-cf9a-4baa-81ae-df5f4b7f8fa1/deploy-status)](https://app.netlify.com/projects/typace-official/deploys)
 
 </div>
 
