@@ -1,4 +1,4 @@
-
+![Typace logo](/typace-logo.webp)
 
 # <div align="center">✨ Typace 杰奏</div>
 
