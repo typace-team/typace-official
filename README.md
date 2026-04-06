@@ -378,6 +378,13 @@ Alternatively, you may consider migrating your blog to the **typace framework**,
 
 If you are using twpress, remember to add frontmatter at the start of each article. If you find this troublesome, leave this mechanical work to AI.
 
+### Sexy suggestions
+
+Finally, some free deployment recommendations:
+For globally stable access speed, **Cloudflare (CF)** is your top choice;
+For first-class deployment experience, go with **Vercel (VC)**.
+If you don’t want your website to get rate-limited after just a few deployments, stay far away from Netlify — it’s utterly garbage and a total pain to deal with.
+
 ---
 
 ## 📄 License
