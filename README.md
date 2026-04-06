@@ -1,6 +1,6 @@
 ![Typace logo](/typace-logo.webp)
 
-# <div align="center">✨ Typace 杰奏</div>
+# <div align="center">✨ OpenTypace 开源杰奏，来自上海，惠及全球</div>
 
 <div align="center">
 
@@ -363,6 +363,20 @@ Have questions or need help? Get in touch:
 - **@typace-team** - our super official account
 - **@terryzhangxr** - Main developer
 - **@che-ui** - Project founder & co-developer
+
+### Important statement
+Dear users of WSLpress and the twpress blog framework (a project under @che-ui),
+
+We hereby announce that we will discontinue maintenance for both projects starting at **16:57:25 Beijing Time, April 6, 2026**.
+
+Users who need further customization may refer to their respective README files for secondary development and contributions. I will check the projects on an irregular basis.
+
+Alternatively, you may consider migrating your blog to the typace framework, which is very simple:
+1. Download the `.md` files from the `public` directory of your original repository.
+2. Fork this repository (**please do not leave the fork network**, otherwise you will no longer receive security updates).
+3. Finally, upload the files to the `public` directory of this repository, and the migration will be complete.
+
+If you are using twpress, remember to add frontmatter at the start of each article. If you find this troublesome, leave this mechanical work to AI.
 
 ---
 
