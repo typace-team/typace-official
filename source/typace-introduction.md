@@ -1,8 +1,8 @@
 ---
-title: 'Typace主题开源配置教程（中文）' 
+title: 'Typace Theme Open Source Configuration Tutorial (official version)' 
 date: '2025-2-21'
 cover: https://ik.imagekit.io/terryzhang/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-04-17%20204625.png
-tags: ["教程"]
+tags: ["Guide"]
 sticky: 999
 ---
 
