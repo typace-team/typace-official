@@ -1,50 +1,50 @@
 ---
-title: 关于我们
+title: About Us
 date: 2025-2-19
 ---
 
-欢迎来到 **Typace** —— 一个由两位初中生发起、致力于分享技术、生活与思考的博客平台。
+Welcome to **Typace** — a blog platform founded by two middle school students, dedicated to sharing technology, life, and thoughts.
 
-### 我们的故事
+### Our Story
 
-Typace 的诞生源于一次偶然的聊天。MRCHE 和 terryzhang 在课间讨论编程作业时，发现彼此都厌倦了千篇一律的博客主题，也渴望有一个地方能自由记录学习路上的点滴。于是，我们决定自己动手，从零开始打造一个干净、轻量、又带点少年气的写作空间。
+Typace was born out of an accidental conversation. While discussing programming homework during a break, MRCHE and terryzhang realized that they were both tired of generic blog themes and longed for a place to freely record the little moments of their learning journey. So we decided to build our own space from scratch — clean, lightweight, and with a touch of youthful spirit.
 
-目前，**Typace 主题正在紧张开发中**，但我们已迫不及待地把它分享出来。你看到的每一个按钮、每一处间距，都经过反复推敲——尽管它还远称不上完美，但我们相信，不完美正是成长的起点。
+Currently, **the Typace theme is under active development**, but we can’t wait to share it with you. Every button and every margin you see has been carefully tweaked — though it's far from perfect, we believe that imperfection is where growth begins.
 
-### 为什么叫 Typace？
+### Why “Typace”?
 
-名字融合了 **Type**（打字、写作）与 **Pace**（步伐、节奏）。我们希望在这里，文字能跟随内心的节奏自然流淌，不追赶热点，不堆砌术语，只记录真实的技术实践、生活感悟和偶尔的奇思妙想。
+The name blends **Type** (writing, typing) with **Pace** (rhythm, speed). We hope that here, words can flow naturally to the rhythm of our hearts — not chasing trends, not piling up jargon, but recording genuine technical practice, life insights, and occasional bursts of imagination.
 
-### 我们的信念
+### Our Belief
 
-> 技术的价值，在于分享和传播。
+> The value of technology lies in sharing and spreading it.
 
-这一行字写在 Typace 每一页的末尾。对我们而言，写博客不是为了当“大神”，而是把调试代码时的抓狂、看懂一篇论文时的狂喜、发现一个好工具时的兴奋，原原本本地讲给更多人听。如果你在我们的文章里哪怕只收获了一点灵感，那 Typace 就有了存在的意义。
+This line appears at the bottom of every Typace page. For us, blogging isn’t about becoming a “guru”; it’s about honestly sharing the frustration of debugging, the joy of understanding a paper, and the excitement of discovering a great tool — telling those stories to as many people as possible. If you gain even a little inspiration from our posts, Typace has found its purpose.
 
-### 关于作者
+### About the Authors
 
 **MRCHE**  
-喜欢折腾 Linux 和前端动画，最近在死磕 Rust。口头禅：“再重构最后一次。”
+Loves tinkering with LLMs and front-end animations. Recently obsessed with solving the last math problem (#25) of Shanghai’s high school entrance exam, as well as basic self-enrollment and competition problems. Catchphrase: “Just one more refactor — the last one, I promise.”
 
 **terryzhang**  
-热衷于后端架构和数据库调优，偶尔写写杂文。坚信“好博客是用键盘敲出来的，不是用框架堆出来的”。
+Enjoys back-end architecture and database tuning, and occasionally writes essays. Believes firmly that “a good blog is crafted with a keyboard, not stacked with frameworks.”
 
-### 接下来做什么？
+### What’s Next?
 
-- 完善 Typace 主题，支持暗色模式、自定义字体和代码高亮插件
-- 每月至少更新 4 篇原创技术文章 + 1 篇生活随笔
-- 开放主题源码（预计 2025 年 Q2 发布第一个稳定版）
+- Improve the Typace theme  
+- Publish at least 4 original technical articles + 1 personal essay every month  
+- Open‑source the theme (first stable release expected after the 2026 high school entrance exam)
 
-### 联系我们
+### Contact Us
 
-如果你有任何问题、建议，或者只是想和我们聊聊技术、学业或理想，欢迎通过以下方式找到我们：
+If you have any questions, suggestions, or just want to chat about technology, school, or dreams, feel free to reach out:
 
-- **邮箱**：[zhang@mrzxr.com](mailto:zhang@mrzxr.com)（terryzhang）
-- **GitHub**： [@mrche](https://github.com/mrche)（MRCHE）
+- **Email**: [typace@proton.me](mailto:typace@proton.me) (typace-team, @che-ui)  
+- **GitHub**: [@mrche](https://github.com/typace-team) (typace-team, @che-ui)
 
-我们也会在 GitHub 上持续更新 Typace 主题的进展，欢迎 star 或提交 issue。
+We’ll also be posting updates on the Typace theme on GitHub. Stars and issues are warmly welcomed.
 
-感谢你的到访。祝你今天也写出让自己满意的代码，或是文字。
+Thank you for visiting. May you write code — or words — that make you proud today.
 
-—— MRCHE & terryzhang  
-2025 年春
+— MRCHE & terryzhang  
+Spring 2026 (It’s the season of mating again)
