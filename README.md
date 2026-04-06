@@ -256,27 +256,6 @@ Typace can be deployed to any platform that supports Next.js:
 - **Self-hosted server** (Node.js required)
 
 ---
-## When using cloudflare pages:
-### Solution: Add `nodejs_compat` Flag
-
-The error is because your Pages project needs the `nodejs_compat` compatibility flag enabled for Next.js/Node.js compatibility.
-
-### Dashboard Steps:
-
-1. In your Pages project, go to **Settings** → **Functions** → **Compatibility Flags**
-
-2. Add `nodejs_compat` to both:
-   - **Production** environment
-   - **Preview** environment
-
-3. Save changes, then redeploy
-
-### Direct Link:
-[Go to Compatibility Flags](https://dash.cloudflare.com/5acaba5f6bc503b6b60f9bd22c993be2/pages/view/:projectName/settings/functions)
-
-*(Replace `:projectName` with your actual Pages project name)*
-
----
 
 ### Or via Wrangler CLI:
 
@@ -326,6 +305,79 @@ Then redeploy with `wrangler pages deploy`.
 | **v1.1.0** | 2025.2 | Dynamic backgrounds |
 | **v1.0.1** | 2025.2 | Homepage bug fixes |
 | **v1.0.0** | 2025.2 | Initial release |
+
+## What's our biggest update
+
+We’ve finally identified the cause of the deployment error on Cloudflare Pages.
+
+⚡️ ERROR: Failed to produce a Cloudflare Pages build from the project.
+
+⚡️   The following routes were not configured to run with the Edge Runtime:
+⚡️     - /api/sitemap
+
+⚡️   Please make sure that all your non-static routes export the following edge runtime route segment config:
+⚡️     export const runtime = 'edge';
+
+## Issue
+The `/api/sitemap` API route is not configured for Edge Runtime. Cloudflare Pages requires all non-static API routes to use Edge Runtime.
+
+## Solution
+### Method 1: Modify `api/sitemap.js` (for Pages Router)
+In your GitHub repository, locate the file `pages/api/sitemap.js` (as indicated in the logs, this is a Pages Router project) and add the following line at the top of the file:
+
+```js
+export const runtime = 'edge';
+```
+
+// Leave the rest of your code unchanged
+
+### Full example:
+```js
+export const runtime = 'edge';
+
+import { RSS } from 'rss';
+
+export async function GET(context) {
+  // Your sitemap logic
+}
+```
+
+### Method 2: Modify `app/api/sitemap/route.js` (for App Router)
+If you are using App Router, edit the file `app/api/sitemap/route.js`:
+
+```js
+export const runtime = 'edge';
+
+export async function GET(request) {
+  // Your sitemap logic
+}
+```
+
+## Steps
+1. Open `pages/api/sitemap.js` in your GitHub repository
+2. Add `export const runtime = 'edge';` as the first line
+3. Commit and push the changes to GitHub
+4. Wait for automatic deployment or trigger it manually
+
+## When using cloudflare pages:
+### Solution: Add `nodejs_compat` Flag
+
+The error is because your Pages project needs the `nodejs_compat` compatibility flag enabled for Next.js/Node.js compatibility.
+
+### Dashboard Steps:
+
+1. In your Pages project, go to **Settings** → **Functions** → **Compatibility Flags**
+
+2. Add `nodejs_compat` to both:
+   - **Production** environment
+   - **Preview** environment
+
+3. Save changes, then redeploy
+
+### Direct Link:
+[Go to Compatibility Flags](https://dash.cloudflare.com/5acaba5f6bc503b6b60f9bd22c993be2/pages/view/:projectName/settings/functions)
+
+*(Replace `:projectName` with your actual Pages project name)*
 
 ---
 
@@ -381,9 +433,9 @@ If you are using twpress, remember to add frontmatter at the start of each artic
 ### Sexy suggestions
 
 Finally, some free deployment recommendations:
-For globally stable access speed, **Cloudflare (CF)** is your top choice;
+For globally stable access speed, **Cloudflare (CF)** is your top choice, demo: https://typace-official.pages.dev;
 For first-class deployment experience, go with **Vercel (VC)**.
-If you don’t want your website to get rate-limited after just a few deployments, stay far away from Netlify — it’s utterly garbage and a total pain to deal with.
+If you don’t want your website to get rate-limited after just a few deployments, stay far away from Netlify — it’s utterly garbage and a total pain to deal with. You can see it by yourself, demo: https://typace-official.netlify.app
 
 ---
 
