@@ -257,15 +257,22 @@ Typace can be deployed to any platform that supports Next.js:
 
 ### 🚀 One-Click Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/typace-team/typace-official)
+#### 🌍 Mainstream overseas platforms (official native buttons, zero configuration)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/typace-team/typace-official&project-name=typace-blog&repository-name=typace-official)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/typace-team/typace-official&build=npm%20run%20build&publish=.vercel/output/static)
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/typace-team/typace-official)
-
-[![Deploy to Tencent Cloud Webify](https://img.shields.io/badge/Deploy_to-Tencent_Cloud_Webify-0066ff?style=for-the-badge&logo=tencentqq)](https://console.cloud.tencent.com/webify/new?tpl=https://github.com/typace-team/typace-official&reponame=typace-official)
-
+[![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/typace-team/typace-official&branch=main)
+[![Deploy to AWS Amplify](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/typace-team/typace-official)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/typace-team/typace-official&branch=main&name=typace-blog)
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/typace-team/typace-official)
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/typace-team/typace-official)
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.StaticApp?repo=https://github.com/typace-team/typace-official)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/typace-team/typace-official)
+
+#### 🇨🇳 国内稳定平台（国内访问优先，图片永久有效）
+[![Deploy to Tencent Cloud Webify](https://img.shields.io/badge/Deploy_to-腾讯云Webify-0066ff?style=for-the-badge&logo=tencentqq)](https://console.cloud.tencent.com/webify/new?tpl=https://github.com/typace-team/typace-official&reponame=typace-official)
+[![部署到火山引擎](https://img.shields.io/badge/部署到-火山引擎-2563EB?style=for-the-badge&logo=bytedance)](https://console.volcengine.com/oss/hosting/create?repo=https://github.com/typace-team/typace-official)
+[![部署到七牛云](https://img.shields.io/badge/部署到-七牛云-275EFE?style=for-the-badge&logo=qiniu)](https://portal.qiniu.com/kodo/website/create?repo=https://github.com/typace-team/typace-official)
 
 ---
 
