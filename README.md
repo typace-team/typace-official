@@ -257,8 +257,10 @@ Typace can be deployed to any platform that supports Next.js:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/typace-team/typace-official&build=npm%20run%20build&publish=.vercel/output/static)
 [![Deploy to Tencent Cloud Webify](https://cloudbase.net/deploy.svg)](https://console.cloud.tencent.com/webify/new?repo=https://github.com/typace-team/typace-official)
-[![Deploy to Aliyun EDAS](https://img.alicdn.com/imgextra/i4/O1CN01bHdrZJ1rEOXtKtU7H_!!6000000005599-55-tps-200-60.svg)](https://edas.console.aliyun.com/create?from=deploy-button&template=https://github.com/typace-team/typace-official)
 [![Deploy to Azure Static Web Apps](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.StaticApp?source=https://github.com/typace-team/typace-official)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/typace-team/typace-official&plugins=redis,docker)
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/typace-team/typace-official)
+[![Deploy to Aliyun FC](https://img.alicdn.com/imgextra/i3/O1CN018z5j0x1Y8v8d3l5yL_!!6000000003647-55-tps-200-60.svg)](https://fc.console.aliyun.com/applications/create?template=https://github.com/typace-team/typace-official)
 
 ---
 
