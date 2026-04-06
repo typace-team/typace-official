@@ -1,11 +1,11 @@
-
 ---
-title: 'Typace Open Source Configuration Guide (English)' 
+title: 'Typace主题开源配置教程（中文）' 
 date: '2025-2-21'
 cover: https://ik.imagekit.io/terryzhang/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-04-17%20204625.png
-tags: ["Guide"]
+tags: ["教程"]
 sticky: 999
 ---
+
 
 Note: This is the Chinese guide for the Typace theme, written according to the latest version of Typace (excluding beta versions). For the English version, please see the GitHub repository.
 
