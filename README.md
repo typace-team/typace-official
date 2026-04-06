@@ -261,8 +261,7 @@ Typace can be deployed to any platform that supports Next.js:
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/typace-team/typace-official&build=npm%20run%20build&publish=.vercel/output/static)
 [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/typace-team/typace-official)
 
-[![Deploy to Tencent Cloud Webify](https://cloudbase.net/deploy.svg)](https://console.cloud.tencent.com/webify/new?repo=https://github.com/typace-team/typace-official)
-[![Deploy to Alibaba Cloud SAE](https://img.alicdn.com/tfs/TB1.5L8aDHrK1Rjy0FeXXXKE7Xa-728-144.png)](https://common-buy.aliyun.com/?spm=deploy.btn&commodityCode=saecn_public_cn&request=%7B%22renderType%22%3A%22deploy%22%2C%22gitRepoURL%22%3A%22https%3A%2F%2Fgithub.com%2Ftypace-team%2Ftypace-official%22%7D)
+[![Deploy to Tencent Cloud Webify](https://img.shields.io/badge/Deploy_to-Tencent_Cloud_Webify-0066ff?style=for-the-badge&logo=tencentqq)](https://console.cloud.tencent.com/webify/new?tpl=https://github.com/typace-team/typace-official&reponame=typace-official)
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https://github.com/typace-team/typace-official)
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/typace-team/typace-official)
@@ -294,9 +293,9 @@ Then redeploy with `wrangler pages deploy`.
 - ✅ SEO optimization
 - ✅ RSS feed generation
 - ✅ Sitemap generation
+- ✅ Search functionality
 
 ### Roadmap
-- 🔜 Search functionality
 - 🔜 Blog post categories
 - 🔜 Advanced analytics
 - 🔜 Social media integration
