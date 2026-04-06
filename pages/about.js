@@ -178,8 +178,8 @@ export default function About({ frontmatter, contentHtml, allPostsData }) {
             {/* 社交按钮 */}
             <div className="flex justify-center items-center space-x-5 pt-6 border-t border-black/5 dark:border-white/10">
               <SocialLink href="https://github.com/typace-team"><GithubIcon /></SocialLink>
-              <SocialLink href="https://x.com/mrche_top"><TwitterIcon /></SocialLink>
-              <SocialLink href="mailto:typace@proton.me><MailIcon /></SocialLink>
+              <SocialLink href="https://twitter.com/mrche_top"><TwitterIcon /></SocialLink>
+              <SocialLink href="mailto:typace@proton.me"><MailIcon /></SocialLink>
               <SocialLink href="#"><RSSIcon /></SocialLink>
             </div>
           </div>
