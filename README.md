@@ -24,7 +24,7 @@
 
 Typace is a **modern, high-performance blog framework** designed for developers, writers, and content creators. Built on top of [Next.js](https://nextjs.org) and styled with [Tailwind CSS](https://tailwindcss.com), it provides an elegant and efficient platform for sharing technology insights, life experiences, and creative thoughts.
 
-**This account is registered and owned by @che-ui. I have noticed that @terryzhangxr, as the lead developer, intentionally removed my attribution, and I express my strong dissatisfaction with this. I hereby issue a formal warning: @che-ui is the original initiator of Typace, and the Typace repository under his account has the earliest creation date.**
+**This account is registered and owned by @che-ui. I have noticed that @terryzhangxr, as the lead developer, intentionally removed my attribution, and I express my strong dissatisfaction with this. I hereby issue a formal warning: @che-ui is the original initiator of Typace, and the Typace repository under his account has the earliest creation date. But please rest assured that we will continue maintaining this project for approximately half a year.**
 
 Created by **@terryzhangxr** and **@che-ui**, two passionate middle school students from Shanghai, China. Typace aims to inspire more people to discover the joy of technology and creative expression.
 
@@ -470,6 +470,64 @@ If you don’t want your website to get rate-limited after just a few deployment
 ## 📄 License
 
 This project is licensed under the **GPL-3.0 License** - see the [LICENSE](LICENSE) file for details.
+
+
+
+---
+### Note (from the author)
+I am che-ui, the developer of Typace. This evaluation was generated with Claude in an **objective and open manner**, and I believe it is fairly balanced. I highly recommend you read it.
+
+You probably won’t find many other developers who explicitly list the shortcomings of their own project in the README. Since we are still students, the progress and quality of this project largely depend on how much time we can dedicate to development.
+
+---
+
+# Typace Blog Framework: Objective Evaluation of Strengths and Limitations
+## I. Strengths
+1. **Modern and mainstream tech stack**
+Built on Next.js 13 + Tailwind CSS, with good performance, SEO, and responsive design, meeting modern frontend development standards.
+2. **Out-of-the-box and easy to deploy**
+Supports one-click deployment on Vercel / Cloudflare Pages with clear CLI steps, friendly for beginners.
+3. **Complete basic functionality**
+Includes core blog features: dark mode, Markdown editing, automatic table of contents, comment system, SEO, sitemap, RSS, etc.
+4. **Lightweight configuration**
+Centralized configuration via `config.js`; theme colors can be quickly modified in Tailwind config, with low customization cost.
+5. **Relatively complete documentation**
+The README covers quick start, project structure, deployment, and troubleshooting, supporting basic usage.
+
+---
+
+## II. Limitations (Weaknesses)
+1. **High risks in team and long-term maintenance**
+Developed by middle school students; long-term maintenance, stability, and security updates are not guaranteed. Controversial developer credits in README reflect poor project management.
+2. **Low functional maturity**
+Key features such as categories, multi-language support, advanced analytics, and social integrations are still planned, unable to meet professional blogging needs.
+3. **Outdated technical selection**
+Uses Next.js 13.5.8 (not the latest App Router standard), with outdated dependencies, poor long-term scalability and compatibility.
+4. **Hardcoded issues in Cloudflare deployment**
+Requires manual addition of `edge runtime` and `nodejs_compat` flags; no built-in framework adaptation, often causing deployment failures.
+5. **Non-standard project structure**
+Unclear `public` directory instructions, vague component layering, scattered API routes, making secondary development and collaboration difficult.
+6. **Comment system relies on self-hosted service**
+The TFCS comment service is hosted in Singapore, with uncontrollable stability, privacy, and availability, and no alternative options.
+7. **Lack of testing and quality assurance**
+No unit tests, E2E tests, or CI checks; code quality and version stability cannot be guaranteed.
+8. **Unprofessional and emotional documentation**
+Contains extreme remarks like “Netlify is completely garbage”; unclear deprecation notices and vague migration steps for legacy projects.
+9. **Weak scalability and ecosystem**
+No plugin system, theme marketplace, or community contributions; updates depend solely on core developers, limiting customization.
+10. **Security and compliance risks**
+Long-unupdated dependencies with known vulnerability risks; no privacy policy or data documentation, lacking compliance.
+11. **Imperfect static export and compatibility**
+Incomplete support for Next.js static export; some API routes fail in pure static environments, restricting applicable scenarios.
+12. **Lack of internationalization and localization**
+No i18n framework, only basic Chinese/English display, unable to support multi-region content publishing.
+
+---
+
+## III. Summary
+Typace is a **lightweight, visually clean, easy-to-deploy** entry-level blog framework suitable for students and beginners to build simple blogs quickly.
+
+However, it is **not suitable for production environments, long-term operation, high-traffic sites, or complex feature requirements**, due to critical flaws in maintenance, stability, security, and missing functionality.
 
 ---
 
