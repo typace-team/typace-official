@@ -1,24 +1,39 @@
+/* styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   TYPace 全局样式表 - 润色版
+   ========================================================================== */
+
 @layer base {
+  /* 亮色模式 CSS 变量 */
   :root {
+    /* 基础颜色 */
     --color-bg-primary: #ffffff;
     --color-text-primary: #2d2d2d;
     --color-text-secondary: #737373;
     --color-link: #3b82f6;
     --color-link-hover: #2563eb;
     --color-border: #e5e7eb;
+
+    /* 代码块 */
     --color-code-bg: #f3f4f6;
     --color-code-text: #1f2937;
+
+    /* 引用块 */
     --color-quote-bg: #f9fafb;
     --color-quote-border: #e5e7eb;
+
+    /* 表格 */
     --color-table-header-bg: #f3f4f6;
     --color-table-row-bg: #ffffff;
     --color-table-row-hover-bg: #f9fafb;
+    --color-table-border: #e5e7eb;
   }
 
+  /* 暗色模式 CSS 变量 */
   .dark {
     --color-bg-primary: #1a1a1a;
     --color-text-primary: #ffffff;
@@ -33,18 +48,22 @@
     --color-table-header-bg: #1f2937;
     --color-table-row-bg: #111827;
     --color-table-row-hover-bg: #1a202c;
+    --color-table-border: #4b5563;
   }
 
+  /* 基础样式 */
   body {
     background-color: var(--color-bg-primary);
     color: var(--color-text-primary);
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease,
-      border-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   }
+}
 
-  /* Article content styles */
+/* ==========================================================================
+   文章内容样式 (.prose)
+   ========================================================================== */
+
+@layer components {
   .prose {
     color: var(--color-text-primary);
     max-width: 100%;
@@ -52,6 +71,7 @@
     overflow-x: hidden;
   }
 
+  /* 标题 */
   .prose h1,
   .prose h2,
   .prose h3,
@@ -61,15 +81,19 @@
     color: var(--color-text-primary);
   }
 
+  /* 链接 */
   .prose a {
     color: var(--color-link);
     transition: color 0.3s ease;
+    text-decoration: underline;
+    text-underline-offset: 2px;
   }
 
   .prose a:hover {
     color: var(--color-link-hover);
   }
 
+  /* 段落 */
   .prose p {
     color: var(--color-text-primary);
   }
@@ -82,16 +106,16 @@
     color: var(--color-text-primary);
   }
 
+  /* 引用块 */
   .prose blockquote {
     @apply border-l-4 pl-4 italic;
     background-color: var(--color-quote-bg);
     border-color: var(--color-quote-border);
     color: var(--color-text-primary);
-    transition:
-      background-color 0.3s ease,
-      border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
 
+  /* 列表 */
   .prose ul,
   .prose ol {
     color: var(--color-text-primary);
@@ -101,21 +125,20 @@
     color: var(--color-text-primary);
   }
 
+  /* 分割线 */
   .prose hr {
     @apply border-t;
     border-color: var(--color-border);
     transition: border-color 0.3s ease;
   }
 
-  /* Code block styles */
+  /* 代码块 */
   .prose pre {
     @apply rounded-xl border p-6 relative;
     background-color: var(--color-code-bg);
     border-color: var(--color-border);
     color: var(--color-code-text);
-    transition:
-      background-color 0.3s ease,
-      border-color 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     max-width: 100%;
     width: 100vw;
     overflow-x: auto;
@@ -140,90 +163,96 @@
     @apply px-2 py-1 rounded;
     background-color: var(--color-code-bg);
     color: var(--color-code-text);
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
+    font-size: 0.9em;
   }
 
-  .prose code::before,
-  .prose code::after {
-    content: '';
+  /* 图片 */
+  .prose img {
+    @apply rounded-lg;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5rem auto;
   }
 
-  /* Code block language label */
-  .code-language-label {
-    @apply bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-t-lg;
-    font-family: monospace;
-    display: inline-block;
-    position: absolute;
-    top: -1.5rem;
-    right: 0;
-  }
+  /* ==========================================================================
+     表格样式 - 增强版
+     ========================================================================== */
 
-  /* Table styles */
   .prose table {
     @apply w-full border-collapse my-6;
-    border-color: var(--color-border);
-    transition: border-color 0.3s ease;
-    display: block;
     width: 100%;
-    overflow-x: auto;
-    white-space: nowrap;
+    display: table;
+    border: 1px solid var(--color-table-border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
-  .prose th,
-  .prose td {
-    @apply p-3 text-left align-top border;
-    border-color: var(--color-border);
-    color: var(--color-text-primary);
-    transition:
-      background-color 0.3s ease,
-      border-color 0.3s ease;
+  .prose thead {
+    border-bottom: 2px solid var(--color-table-border);
   }
 
   .prose th {
-    @apply font-semibold;
+    @apply p-3 text-left align-middle;
     background-color: var(--color-table-header-bg);
+    color: var(--color-text-primary);
+    font-weight: 600;
+    border-right: 1px solid var(--color-table-border);
+    border-bottom: 1px solid var(--color-table-border);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
   }
 
-  .prose tr {
+  .prose th:last-child {
+    border-right: none;
+  }
+
+  .prose td {
+    @apply p-3 text-left align-top;
+    color: var(--color-text-primary);
+    border-right: 1px solid var(--color-table-border);
+    border-bottom: 1px solid var(--color-table-border);
+    transition: border-color 0.3s ease;
+  }
+
+  .prose td:last-child {
+    border-right: none;
+  }
+
+  .prose tr:last-child td {
+    border-bottom: none;
+  }
+
+  .prose tbody tr {
     background-color: var(--color-table-row-bg);
     transition: background-color 0.3s ease;
   }
 
-  .prose tr:nth-child(even) {
+  .prose tbody tr:nth-child(even) {
     background-color: var(--color-table-row-hover-bg);
   }
 
-  .prose tr:hover {
+  .prose tbody tr:hover {
     background-color: var(--color-table-row-hover-bg);
+    filter: brightness(0.95);
   }
 
-  /* Image styles */
-  .prose img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Responsive adjustments */
-  @media (min-width: 1024px) {
-    .prose pre {
-      width: calc(100% + 8rem);
-      margin-left: -4rem;
-      margin-right: -4rem;
-    }
-    
+  /* 小屏幕响应式 */
+  @media (max-width: 640px) {
     .prose table {
-      display: table;
-      white-space: normal;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
     }
   }
 }
 
-/* Page container animation */
+/* ==========================================================================
+   页面容器动画
+   ========================================================================== */
+
 .page-container {
   opacity: 0;
   transform: translateY(100px);
@@ -235,28 +264,16 @@
   transform: translateY(0);
 }
 
-/* Performance optimization */
-@media (prefers-reduced-motion: no-preference) {
-  .page-container {
-    animation-duration: 0.6s;
+/* ==========================================================================
+   性能优化
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-}
-
-/* Custom scrollbar for code blocks */
-.prose pre::-webkit-scrollbar {
-  height: 6px;
-}
-
-.prose pre::-webkit-scrollbar-track {
-  background: var(--color-code-bg);
-  border-radius: 0 0 0.5rem 0.5rem;
-}
-
-.prose pre::-webkit-scrollbar-thumb {
-  background: var(--color-border);
-  border-radius: 0 0 0.5rem 0.5rem;
-}
-
-.prose pre::-webkit-scrollbar-thumb:hover {
-  background: var(--color-text-secondary);
 }
