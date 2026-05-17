@@ -463,7 +463,7 @@ We welcome contributions from everyone! Whether it's bug fixes, new features, or
 
 Have questions or need help? Get in touch:
 
-- **Email**: [click to send](mailto:liyin_iup4wfsweb@aka.yeah.net)
+- **Email**: [Click to send](mailto:liyin_iup4wfsweb@aka.yeah.net)
 - **GitHub Issues**: [Report a bug](https://github.com/typace-team/typace-official/issues)
 - **Discussions**: [Join the conversation](https://github.com/typace-team/typace-official/discussions)
 
