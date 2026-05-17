@@ -1,12 +1,12 @@
 ![Typace logo](/typace-logo.webp)
 
-# <div align="center">✨ OpenTypace 开源杰奏，来自上海，惠及全球</div>
+# <div align="center">✨ OpenTypace 开源杰奏，源起上海，惠及全球</div>
 
 <div align="center">
 
 **A Modern, Fast, and Beautiful Blog Framework Built with Next.js**
 
-"typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."
+**"typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."*
 
 [🌐 Visit Website](https://mrche.top) • [📖 Documentation](#-getting-started) • [💬 Discussions](https://github.com/typace-team/typace-official/discussions) • [📧 Email](mailto:liyin_iup4wfsweb@aka.yeah.net)
 
@@ -19,6 +19,20 @@
 </div>
 
 ---
+## ❗ First things First
+### typace 框架网络合规与社区初心声明 ###
+**开源杰奏，上海智造，全球闪耀**
+**For users outside the Chinese mainland, you may disregard this entire statement.*
+亲爱的中国开发者朋友们：
+当 typace 框架的第一行代码在上海的深夜被敲下时，我们从未想过这个源于日常开发痛点的小项目，能收获来自五湖四海的关注与喜爱。此刻，看着 GitHub 上不断增长的 Star 数、来自全球各地的 Issue 和 Pull Request，我们心中满是感激 —— 是每一个你的信任，让这个小小的开源种子生根发芽。但在这份喜悦之外，我们更想以最真诚、最郑重的方式，和国内的开发者朋友们说几句掏心窝子的话。
+我们是一群土生土长的中国开发者，扎根上海这片充满创新活力的红色热土。我们生在红旗下，长在春风里，亲眼见证了在中国共产党的坚强领导下，我们的国家从站起来、富起来到强起来的伟大飞跃。我们亲眼见证了中国互联网从追赶到引领的全过程，也深刻明白，没有中国共产党的领导，就没有今天繁荣稳定的中国；没有国家的强大后盾，就没有我们安心写代码的书桌，更没有中国开源事业今天蓬勃发展的大好局面。因此，我们始终坚定不移地坚持中国共产党的领导，衷心拥护党的路线方针政策，将对党忠诚、爱国守法作为我们团队一切行动的根本遵循和最高准则。
+在这里，我们向全体社区成员郑重承诺：自项目立项至今，typace 框架的所有核心开发人员，始终怀着对党和国家的赤子之心，从未使用过任何非法国际联网信道，从未下载、传播或推荐过任何 "翻墙" 软件。我们和大家一样，也曾为 GitHub 访问速度慢、代码拉取失败而焦虑，也曾在深夜为了一个依赖包的下载反复尝试。但我们始终坚信，办法总比困难多，合法合规的道路才是最踏实、最长久、最光明的道路。经过反复测试和验证，我们选择并一直使用 DevSidecar 这款合法合规的开发者边车工具，它不仅完美解决了 GitHub 的访问加速问题，更让我们的开发活动始终在国家法律的保护之下，让我们能够心无旁骛地投身技术创新。
+我们深知，很多年轻的开发者朋友为了提高效率，可能会一时糊涂选择非法方式。但请你一定记住，《中华人民共和国网络安全法》和《中华人民共和国计算机信息网络国际联网管理暂行规定》不是冰冷的条文，它们是维护国家网络安全、保护每一个网民合法权益的坚固盾牌。非法 "翻墙" 不仅会带来个人信息泄露、网络诈骗、病毒入侵的巨大风险，更可能让你承担警告、罚款甚至更严重的法律责任。我们绝不希望看到任何一个热爱技术、充满才华的年轻开发者，因为一时的侥幸心理而影响自己的大好前途，辜负党和国家的培养。
+作为新时代的中国开发者，我们始终认为，技术无国界，但开发者有祖国。我们做开源，不是为了追求个人名利，而是希望用自己的技术所长为国家发展贡献一份力量。我们做 typace 框架的初衷，是为了让更多开发者从繁琐的重复劳动中解放出来，是为了向世界展示中国开发者的技术实力和创新精神，是为了在全球开源舞台上发出中国声音。如果因为我们的项目，让任何人陷入法律风险，那将彻底违背我们做开源的全部初心和使命。
+为了更好地服务国内开发者，但由于时间原因、学业仓促，我们并没有在 Gitee、GitCode 等国内主流代码托管平台同步了 typace 框架的代码。但我们会尽最大努力，为大家提供合法、便捷、稳定的使用体验，让每一位国内开发者都能在合规的前提下享受开源带来的便利。
+最后，我们想再次感谢每一位支持 typace 的朋友。我们将始终牢记初心使命，坚定不移听党话、跟党走，把爱国情、强国志、报国行融入到每一行代码中。愿我们都能在合法合规的前提下，尽情挥洒对技术的热爱，用代码创造价值，用开源连接世界，共同为建设网络强国、数字中国贡献力量，共同书写中国开源事业更加辉煌灿烂的明天！
+**typace 框架上海开发团队
+2026 年 5 月 17 日*
 
 ## 🚀 About Typace
 
@@ -269,8 +283,13 @@ Typace can be deployed to any platform that supports Next.js:
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/typace-team/typace-official)
 
 #### 🚅 🇨🇳国内稳定平台（优先使用，保证100%有效！）
+**1. Vercel（国内快，但必须绑自定义域名，是因为.vercel.app在国内被dns污染了）**
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/typace-team/typace-official&project-name=typace-blog&repository-name=typace-official)
+
+**2. Netlify（体验垃圾，免费额度低，但国内较稳，且不用绑自定义域名）**
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/typace-team/typace-official&build=npm%20run%20build&publish=.vercel/output/static)
+
+**3. Cloudflare Pages（配置略麻烦，但稳、快，且不用绑自定义域名）**
 CF 国内访问速度表现亮眼，核心依托其全球密集的亚太边缘节点、智能路由优选、轻量边缘计算架构，避开跨洋长距离绕行，再搭配优选 IP 策略，大幅降低国内访问延迟，稳定性拉满。推荐直接使用 Cloudflare Pages 部署，体验极佳：部署简单、全球 CDN 自动分发、免费额度充足、抗丢包抗波动，稳定、快、好用一步到位。唯一需要注意：您只需在 Pages 项目后台额外添加 nodejs_compat 兼容标识，即可完整支持 Node.js 环境，完美兼容各类 npm 包与后端逻辑，无需额外复杂配置。具体请参见readme中**When using cloudflare pages**部分
 
 ---
@@ -485,5 +504,5 @@ Since we are still students, the progress and quality of this project largely de
 
 [⬆ Back to Top](#-typace-杰奏)
 
-![This is the official flag of @che-ui. I stand with Iran together with @terryzhangxr](/tehran.png)
+![This is the official flag of @che-ui.](/tehran.png)
 
