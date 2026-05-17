@@ -257,7 +257,7 @@ Typace can be deployed to any platform that supports Next.js:
 
 ### 🚀 One-Click Deploy
 
-#### 🌍 Mainstream overseas platforms (official native buttons, zero configuration)
+#### 🌍 Mainstream platforms (official native buttons, zero configuration)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/typace-team/typace-official&project-name=typace-blog&repository-name=typace-official)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/typace-team/typace-official&build=npm%20run%20build&publish=.vercel/output/static)
 [![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/typace-team/typace-official&branch=main)
@@ -268,9 +268,10 @@ Typace can be deployed to any platform that supports Next.js:
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.StaticApp?repo=https://github.com/typace-team/typace-official)
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/typace-team/typace-official)
 
-#### 🇨🇳 国内稳定平台（优先使用，保证100%有效！）
+#### 🚅 🇨🇳国内稳定平台（优先使用，保证100%有效！）
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/typace-team/typace-official&project-name=typace-blog&repository-name=typace-official)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/typace-team/typace-official&build=npm%20run%20build&publish=.vercel/output/static)
+CF 国内访问速度表现亮眼，核心依托其全球密集的亚太边缘节点、智能路由优选、轻量边缘计算架构，避开跨洋长距离绕行，再搭配优选 IP 策略，大幅降低国内访问延迟，稳定性拉满。推荐直接使用 Cloudflare Pages 部署，体验极佳：部署简单、全球 CDN 自动分发、免费额度充足、抗丢包抗波动，稳定、快、好用一步到位。唯一需要注意：您只需在 Pages 项目后台额外添加 nodejs_compat 兼容标识，即可完整支持 Node.js 环境，完美兼容各类 npm 包与后端逻辑，无需额外复杂配置。具体请参见readme中**When using cloudflare pages**部分
 
 ---
 
@@ -347,7 +348,7 @@ We’ve finally identified the cause of the deployment error on Cloudflare Pages
 ## Issue
 The `/api/sitemap` API route is not configured for Edge Runtime. Cloudflare Pages requires all non-static API routes to use Edge Runtime.
 
-## Solution
+## My own Solution
 ### Method 1: Modify `api/sitemap.js` (for Pages Router)
 In your GitHub repository, locate the file `pages/api/sitemap.js` (as indicated in the logs, this is a Pages Router project) and add the following line at the top of the file:
 
