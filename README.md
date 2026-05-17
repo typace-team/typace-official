@@ -1,4 +1,5 @@
 ![Typace logo](/typace-logo.webp)
+![mail](/mail.png)
 
 # <div align="center">✨ OpenTypace 开源杰奏，源起上海，惠及全球</div>
 
