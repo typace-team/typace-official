@@ -1,68 +1,56 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class', // 启用暗黑模式
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx}', 
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: 'class',
   theme: {
     extend: {
-      typography: {
+      colors: {
+        primary: '#3AB1CE',
+        secondary: '#F472B6',
+        dark: '#1a1a1a',
+        glass: 'rgba(255, 255, 255, 0.1)',
+      },
+      fontFamily: {
+        sans: ['"Inter"', 'sans-serif'],
+        mono: ['"Fira Code"', 'monospace'],
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      // 扩展暗黑模式下的样式
+      typography: (theme) => ({
         DEFAULT: {
           css: {
-            maxWidth: '100%',
-            color: 'var(--tw-prose-body)',
-            'h1, h2, h3, h4, h5, h6': {
-              color: 'var(--tw-prose-headings)',
-            },
+            color: theme('colors.gray.800'),
             a: {
-              color: 'var(--tw-prose-links)',
+              color: theme('colors.primary'),
               '&:hover': {
-                color: 'var(--tw-prose-links-hover)',
+                color: theme('colors.secondary'),
               },
-            },
-            pre: {
-              backgroundColor: 'var(--tw-prose-pre-bg)',
-              color: 'var(--tw-prose-pre-code)',
-              border: '1px solid var(--tw-prose-pre-border)',
-            },
-            code: {
-              backgroundColor: 'var(--tw-prose-code-bg)',
-              color: 'var(--tw-prose-code)',
-              padding: '0.2em 0.4em',
-              borderRadius: '0.25rem',
-              fontWeight: '400',
-              '&::before, &::after': {
-                display: 'none',
-              },
-            },
-            blockquote: {
-              borderLeftColor: 'var(--tw-prose-quote-borders)',
-              backgroundColor: 'var(--tw-prose-quote-bg)',
-              padding: '1rem 1.5rem',
-              borderRadius: '0.5rem',
             },
           },
         },
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        dark: {
+          css: {
+            color: theme('colors.gray.300'), // 暗黑模式下字体颜色为浅色
+            a: {
+              color: theme('colors.primary'),
+              '&:hover': {
+                color: theme('colors.secondary'),
+              },
+            },
+          },
         },
-        slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' },
-        },
-      },
+      }),
     },
   },
   plugins: [
-    require('@tailwindcss/typography'), // 新增这一行
+    require('@tailwindcss/typography'),
+    require('tailwindcss-text-fill-stroke'),
   ],
-}
+};
