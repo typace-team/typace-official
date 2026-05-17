@@ -8,7 +8,7 @@
 
 "typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."
 
-[🌐 Visit Website](https://mrche.top) • [📖 Documentation](#-getting-started) • [💬 Discussions](https://github.com/typace-team/typace-official/discussions) • [📧 Email](mailto:typace@proton.me)
+[🌐 Visit Website](https://mrche.top) • [📖 Documentation](#-getting-started) • [💬 Discussions](https://github.com/typace-team/typace-official/discussions) • [📧 Email](mailto:liyin_iup4wfsweb@aka.yeah.net)
 
 [![License](https://img.shields.io/badge/License-GPL--3.0-blue)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-13.5.8-black?logo=next.js)](https://nextjs.org)
@@ -432,7 +432,7 @@ We welcome contributions from everyone! Whether it's bug fixes, new features, or
 
 Have questions or need help? Get in touch:
 
-- **Email**: [typace@proton.me](mailto:typace@proton.me)
+- **Email**: [click to send](mailto:liyin_iup4wfsweb@aka.yeah.net)
 - **GitHub Issues**: [Report a bug](https://github.com/typace-team/typace-official/issues)
 - **Discussions**: [Join the conversation](https://github.com/typace-team/typace-official/discussions)
 
