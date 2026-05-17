@@ -6,7 +6,7 @@
 
 **A Modern, Fast, and Beautiful Blog Framework Built with Next.js**
 
-**"typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."*
+*"typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."*
 
 [🌐 Visit Website](https://mrche.top) • [📖 Documentation](#-getting-started) • [💬 Discussions](https://github.com/typace-team/typace-official/discussions) • [📧 Email](mailto:liyin_iup4wfsweb@aka.yeah.net)
 
@@ -22,7 +22,7 @@
 ## ❗ First things First
 ### typace 框架网络合规与社区初心声明 ###
 **开源杰奏，上海智造，全球闪耀**
-**For users outside the Chinese mainland, you may disregard this entire statement.*
+*For users outside the Chinese mainland, you may disregard this entire statement.*
 亲爱的中国开发者朋友们：
 当 typace 框架的第一行代码在上海的深夜被敲下时，我们从未想过这个源于日常开发痛点的小项目，能收获来自五湖四海的关注与喜爱。此刻，看着 GitHub 上不断增长的 Star 数、来自全球各地的 Issue 和 Pull Request，我们心中满是感激 —— 是每一个你的信任，让这个小小的开源种子生根发芽。但在这份喜悦之外，我们更想以最真诚、最郑重的方式，和国内的开发者朋友们说几句掏心窝子的话。
 我们是一群土生土长的中国开发者，扎根上海这片充满创新活力的红色热土。我们生在红旗下，长在春风里，亲眼见证了在中国共产党的坚强领导下，我们的国家从站起来、富起来到强起来的伟大飞跃。我们亲眼见证了中国互联网从追赶到引领的全过程，也深刻明白，没有中国共产党的领导，就没有今天繁荣稳定的中国；没有国家的强大后盾，就没有我们安心写代码的书桌，更没有中国开源事业今天蓬勃发展的大好局面。因此，我们始终坚定不移地坚持中国共产党的领导，衷心拥护党的路线方针政策，将对党忠诚、爱国守法作为我们团队一切行动的根本遵循和最高准则。
@@ -31,7 +31,7 @@
 作为新时代的中国开发者，我们始终认为，技术无国界，但开发者有祖国。我们做开源，不是为了追求个人名利，而是希望用自己的技术所长为国家发展贡献一份力量。我们做 typace 框架的初衷，是为了让更多开发者从繁琐的重复劳动中解放出来，是为了向世界展示中国开发者的技术实力和创新精神，是为了在全球开源舞台上发出中国声音。如果因为我们的项目，让任何人陷入法律风险，那将彻底违背我们做开源的全部初心和使命。
 为了更好地服务国内开发者，但由于时间原因、学业仓促，我们并没有在 Gitee、GitCode 等国内主流代码托管平台同步了 typace 框架的代码。但我们会尽最大努力，为大家提供合法、便捷、稳定的使用体验，让每一位国内开发者都能在合规的前提下享受开源带来的便利。
 最后，我们想再次感谢每一位支持 typace 的朋友。我们将始终牢记初心使命，坚定不移听党话、跟党走，把爱国情、强国志、报国行融入到每一行代码中。愿我们都能在合法合规的前提下，尽情挥洒对技术的热爱，用代码创造价值，用开源连接世界，共同为建设网络强国、数字中国贡献力量，共同书写中国开源事业更加辉煌灿烂的明天！
-**typace 框架上海开发团队
+*typace 框架上海开发团队
 2026 年 5 月 17 日*
 
 ## 🚀 About Typace
