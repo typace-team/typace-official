@@ -1,5 +1,5 @@
 ![Typace logo](/typace-logo.webp)
-![mail](/mail.png)
+![📧Email banner](/mail.png)
 
 # <div align="center">✨ OpenTypace 开源杰奏，源起上海，惠及全球</div>
 
@@ -9,7 +9,7 @@
 
 *"typace is developed by @che-ui and @terryzhangxr, but we are now migrating the official version to this account. We welcome everyone to use it."*
 
-[🌐 Visit Website](https://mrche.top) • [📖 Documentation](#-getting-started) • [💬 Discussions](https://github.com/typace-team/typace-official/discussions) • [📧 Email](mailto:liyin_iup4wfsweb@aka.yeah.net)
+[🌐 Visit Website](https://mrche.top) • [📖 Documentation](https://github.com/typace-team/typace-official/blob/main/README.md) • [🤖 Insights](https://github.com/typace-team/typace-official/pulse) • [📧 Email](mailto:liyin_iup4wfsweb@aka.yeah.net)
 
 [![License](https://img.shields.io/badge/License-GPL--3.0-blue)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-13.5.8-black?logo=next.js)](https://nextjs.org)
