@@ -1,7 +1,6 @@
 ![Typace logo](/typace-logo.webp)
-![📧Email banner](/mail.png)
 
-# <div align="center">✨ OpenTypace 开源杰奏，源起上海，惠及全球</div>
+# <div align="center">✨ OpenTypace 开源杰奏，上海智造，全球闪耀</div>
 
 <div align="center">
 
@@ -23,8 +22,6 @@
 ## ❗ First things First
 
 ### typace 框架网络合规与社区初心声明 ###
-
-**开源杰奏，上海智造，全球闪耀**
 
 *For users outside the Chinese mainland, you may disregard this entire statement.*
 
@@ -515,6 +512,8 @@ Since we are still students, the progress and quality of this project largely de
 ### Made with ❤️ by the Typace Team
 
 [⬆ Back to Top](#-typace-杰奏)
+
+![📧Email banner](/mail.png)
 
 ![This is the official flag of @che-ui.](/tehran.png)
 
