@@ -1,4 +1,4 @@
-![Typace logo](/typace-logo.webp)
+![Typace logo](/repocard-typace.png)
 
 # <div align="center">✨ OpenTypace 开源杰奏，上海智造，全球闪耀</div>
 
