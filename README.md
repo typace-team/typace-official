@@ -1,5 +1,7 @@
 ![Typace logo](/repocard-typace.png)
 
+![Mind-Blowing Stats](/Mind-Blowing Stats.png)
+
 # <div align="center">✨ OpenTypace 开源杰奏，上海智造，全球闪耀</div>
 
 <div align="center">
