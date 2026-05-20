@@ -21,6 +21,11 @@
 </div>
 
 ---
+## Useful tools
+Tomorrow Markdown Editor for Typace v1.2：https://tme.mrche.top
+多方式图片上传与Base64转换工具 | Typace：https://img.mrche.top
+
+
 ## ❗ First things First
 
 ### typace 框架网络合规与社区初心声明 ###
