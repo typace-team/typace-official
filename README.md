@@ -30,7 +30,7 @@ Tomorrow Markdown Editor for Typace v1.2：https://tme.mrche.top
 
 ## ❗ First things First
 
-### typace 框架网络合规与社区初心声明 ###
+[typace 框架网络合规与社区初心声明](https://github.com/typace-team/typace-official/blob/main/statement.md)
 
 *For users outside the Chinese mainland, you may disregard this entire statement.*
 
