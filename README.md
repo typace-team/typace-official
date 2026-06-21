@@ -32,38 +32,12 @@ Tomorrow Markdown Editor for Typace v1.2：https://tme.mrche.top
 
 *For users outside the Chinese mainland, you may disregard this entire statement.*
 
-亲爱的中国开发者朋友们：
-当 typace 框架的第一行代码在上海的深夜被敲下时，我们从未想过这个源于日常开发痛点的小项目，能收获来自五湖四海的关注与喜爱。此刻，看着 GitHub 上不断增长的 Star 数、来自全球各地的 Issue 和 Pull Request，我们心中满是感激 —— 是每一个你的信任，让这个小小的开源种子生根发芽。但在这份喜悦之外，我们更想以最真诚、最郑重的方式，和国内的开发者朋友们说几句掏心窝子的话。
-
-我们是一群土生土长的中国开发者，扎根上海这片充满创新活力的红色热土。我们生在红旗下，长在春风里，亲眼见证了在中国共产党的坚强领导下，我们的国家从站起来、富起来到强起来的伟大飞跃。我们亲眼见证了中国互联网从追赶到引领的全过程，也深刻明白，没有中国共产党的领导，就没有今天繁荣稳定的中国；没有国家的强大后盾，就没有我们安心写代码的书桌，更没有中国开源事业今天蓬勃发展的大好局面。因此，我们始终坚定不移地坚持中国共产党的领导，衷心拥护党的路线方针政策，将对党忠诚、爱国守法作为我们团队一切行动的根本遵循和最高准则。
-
-在这里，我们向全体社区成员郑重承诺：自项目立项至今，typace 框架的所有核心开发人员，始终怀着对党和国家的赤子之心，从未使用过任何非法国际联网信道，从未下载、传播或推荐过任何 "翻墙" 软件。我们和大家一样，也曾为 GitHub 访问速度慢、代码拉取失败而焦虑，也曾在深夜为了一个依赖包的下载反复尝试。但我们始终坚信，办法总比困难多，合法合规的道路才是最踏实、最长久、最光明的道路。经过反复测试和验证，我们选择并一直使用 DevSidecar 这款合法合规的开发者边车工具，它不仅完美解决了 GitHub 的访问加速问题，更让我们的开发活动始终在国家法律的保护之下，让我们能够心无旁骛地投身技术创新。
-
-我们深知，很多年轻的开发者朋友为了提高效率，可能会一时糊涂选择非法方式。但请你一定记住，《中华人民共和国网络安全法》和《中华人民共和国计算机信息网络国际联网管理暂行规定》不是冰冷的条文，它们是维护国家网络安全、保护每一个网民合法权益的坚固盾牌。非法 "翻墙" 不仅会带来个人信息泄露、网络诈骗、病毒入侵的巨大风险，更可能让你承担警告、罚款甚至更严重的法律责任。我们绝不希望看到任何一个热爱技术、充满才华的年轻开发者，因为一时的侥幸心理而影响自己的大好前途，辜负党和国家的培养。
-
-作为新时代的中国开发者，我们始终认为，技术无国界，但开发者有祖国。我们做开源，不是为了追求个人名利，而是希望用自己的技术所长为国家发展贡献一份力量。我们做 typace 框架的初衷，是为了让更多开发者从繁琐的重复劳动中解放出来，是为了向世界展示中国开发者的技术实力和创新精神，是为了在全球开源舞台上发出中国声音。如果因为我们的项目，让任何人陷入法律风险，那将彻底违背我们做开源的全部初心和使命。
-
-作为深耕开发者服务领域的typace-team，我们始终记得，每一位国内开发者在代码世界里前行的不易——那些被技术壁垒困住的瞬间，那些为了一个功能反复调试的坚持，那些因工具不便而消耗的精力，我们都看在眼里，记在心里。也正因为这份共情，我们毅然决定，将评论系统从gitalk全面迁移到TFCS（typace-free-comment-service），只为给国内开发者，多一份便利，多一份安心。
-
-我们深知，gitalk在国内使用时的诸多阻碍：频繁无法登录、加载缓慢，每一次尝试接入评论功能，都要耗费额外的时间与耐心，甚至让许多开发者被迫放弃便捷的评论交互。为了打破这份困境，我们没有选择妥协，而是主动扛起责任，专门购置数据库，将其部署在新加坡——这个紧邻中国内地的节点，既能最大程度降低访问延迟，让评论功能流畅可用，也能兼顾服务的稳定性，让每一次交互都无需等待。
-
-更重要的是，我们始终把开发者的隐私与安全放在首位。不同于传统评论系统需要输入client secret才能使用，我们搭建的TFCS，无需任何敏感信息，无需繁琐配置，开发者只需简单接入，就能拥有安全、便捷的评论服务。我们知道，client secret承载着开发者的隐私安全，每多一步输入，就多一份风险，所以我们竭尽所能简化流程，隔绝风险，用技术的力量，为开发者筑起一道安全屏障。
-
-这份迁移，无关利益，只为初心；这份共享，无关回报，只为同行。我们typace-team始终相信，技术的价值，在于彼此成就、彼此照亮。每一次优化，每一次付出，都是为了让国内开发者能更专注于创作本身，不用再为工具的不便而烦恼，不用再为隐私的安全而担忧。愿我们搭建的TFCS，能成为每一位开发者前行路上的微光，伴你在代码的世界里，无畏前行，温暖相伴。
-
-我们已经尽最大努力，为大家提供合法、便捷、稳定的使用体验，让每一位国内开发者都能在合规的前提下享受开源带来的便利。国内下载链接：https://cdn.china.mrche.top/2026-05-18%20typace-official-main.zip
-
-最后，我们想再次感谢每一位支持 typace 的朋友。我们将始终牢记初心使命，坚定不移听党话、跟党走，把爱国情、强国志、报国行融入到每一行代码中。愿我们都能在合法合规的前提下，尽情挥洒对技术的热爱，用代码创造价值，用开源连接世界，共同为建设网络强国、数字中国贡献力量，共同书写中国开源事业更加辉煌灿烂的明天！
-
-*typace 框架上海开发团队*
-
-*2026 年 5 月 17 日*
 
 ## 🚀 About Typace
 
 Typace is a **modern, high-performance blog framework** designed for developers, writers, and content creators. Built on top of [Next.js](https://nextjs.org) and styled with [Tailwind CSS](https://tailwindcss.com), it provides an elegant and efficient platform for sharing technology insights, life experiences, and creative thoughts.
 
-**This account is registered and owned by @che-ui, the original initiator of Typace, and the Typace repository under his account has the earliest creation date. I will continue maintaining this project for approximately half a year.**
+**This account is registered and owned by @che-ui, the original initiator of Typace, and the Typace repository under his account has the earliest creation date. I will continue maintaining this project for approximately 2 years.**
 
 Created by **@terryzhangxr** and **@che-ui**, two passionate middle school students from Shanghai, China. Typace aims to inspire more people to discover the joy of technology and creative expression.
 
