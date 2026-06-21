@@ -1,4 +1,6 @@
-![Typace logo](/repocard-typace.png)
+![Typace logo](/repo-banner.png)
+
+![Typace logo](/lang.png)
 
 ![Typace Stats](/Mind-Blowing-Stats.png)
 
