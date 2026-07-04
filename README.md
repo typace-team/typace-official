@@ -480,7 +480,7 @@ If you are using twpress, remember to add frontmatter at the start of each artic
 ### Sexy suggestions
 
 Finally, some free deployment recommendations:
-For globally stable access speed, **Cloudflare (CF)** is your top choice, demo: https://typace-official.pages.dev;
+For globally stable access speed, **Cloudflare (CF)** is your top choice, demo: https://cloudflare-pages.typace-official.typace-team.public.qpon/;
 For first-class deployment experience, go with **Vercel (VC)**.
 If you don’t want your website to get rate-limited after just a few deployments, stay far away from Netlify — it’s utterly garbage and a total pain to deal with. You can see it by yourself, demo: https://typace-official.netlify.app
 
